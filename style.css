@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{
+  padding: 0;
+}
+
+body{
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  background: linear-gradient(90deg,aqua 0%,blue 50%,purple 100%);
+}
+
+button{
+  padding: 8px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 100px;
+  background: whitesmoke;
+}
+
+button:hover{
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.container{
+  width: 1280px;
+  margin: auto;
+}
+
+
+#header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 70px;
+  padding: 0 40px;
+  background:linear-gradient(90deg,rgb(179, 255, 0) 0%,rgb(255, 166, 0) 50%,rgb(255, 230, 2) 100%);
+  border-radius: 100px;
+}
+
+#header button{
+  font-family: inherit;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 100px;
+}
+
+#create_card{
+  display: none;
+  width: 370px;
+  margin:auto;
+  padding: 30px;
+  margin-top: 20px;
+  background: whitesmoke;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.9);
+  border-radius: 20px;
+}
+
+#create_card h2{
+  color: black;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#create_card textarea{
+  width: 100%;
+  border-radius: 100px;
+  font-family: inherit;
+  border: 1px solid rgb(211, 211, 211);
+  resize: none;
+  text-align: center;
+  font-size: 12px;
+  padding-top: 15px;
+}
+
+
+#flashcards{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+  margin-top: 10px;
+  padding: 10px 10px;
+}
+
+.flashcard{
+  width: 370px;
+  height: 200px;
+  word-wrap: break-word;
+  margin: 10px; 
+  background:#fff;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
+  position: relative;
+  border-radius: 20px;
+}
+
+.flashcard h2{font-size: 20px;}
+
+.fa-minus{
+  top: 3%;
+  right: 2%;
+  position: absolute;
+  color: #1a1a1a;
+  transition: 0.3s ease-out;
+}
+
+.fa-minus:hover{color: red;}
+
+@media(max-width:1280px){
+  .container{width: 100%;}
+}
+
+@media(max-width:768px){
+  .flashcard{margin: auto;}
+
+  .flashcard{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media(max-width:480px){
+  #header{
+    padding: 20px;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #create_card{width: 95%;}
+
+  .flashcard{width: 100%;}
+
+}
